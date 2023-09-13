@@ -11,24 +11,13 @@ export class App extends Component {
     ],
     name: '',
   };
-  addNewItemI = e => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const inputValue = form.elements.name.value;
-  };
+
   render() {
     return (
       <>
         <h2>Phonebook</h2>
         <ContactForm />
-        <ContactList
-          contacts={this.state.contacts}
-          addNewItem={e => {
-            e.preventDefault();
-            const form = e.currentTarget;
-            const inputValue = form.elements.name.value;
-          }}
-        />
+        <ContactList contacts={this.state.contacts} />
       </>
     );
   }
