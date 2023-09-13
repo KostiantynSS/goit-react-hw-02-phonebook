@@ -1,0 +1,21 @@
+.form {
+  border: 1px solid black;
+  width: 20vw;
+  padding: 15px;
+}
+.form label,
+input {
+  display: block;
+}
+input {
+  margin-top: 10px;
+}
+button {
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 1px solid;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: rgba(92, 156, 72, 0.811);
+}
