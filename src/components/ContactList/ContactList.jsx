@@ -1,14 +1,20 @@
 import { Component } from 'react';
 import css from './contactList.module.css';
-
+import ContactItem from 'components/ContactItem/ContactItem';
 export class ContactList extends Component {
+  deleteContact = data => {
+    this.props.onClick(data);
+  };
   render() {
     return (
       <>
-        <h2>Contacts</h2>
         <ul className={css.list}>
           {this.props.contacts.map(contact => (
-            <li key={contact.id}>{contact.name}</li>
+            <ContactItem
+              contact={contact}
+              key={contact.id}
+              onClick={this.deleteContact}
+            />
           ))}
         </ul>
       </>
