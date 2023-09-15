@@ -1,6 +1,16 @@
 import { Component } from 'react';
 import css from './contactItem.module.css';
+import PropTypes from 'prop-types';
+
 class ContactItem extends Component {
+  static propTypes = {
+    onClick: PropTypes.func,
+    contact: PropTypes.shape({
+      name: PropTypes.string,
+      number: PropTypes.string,
+      id: PropTypes.string,
+    }),
+  };
   deleteBtnHandler = e => {
     const contactToDelete =
       e.currentTarget.previousElementSibling.firstChild.data;
