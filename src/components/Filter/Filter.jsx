@@ -3,7 +3,10 @@ import css from './filter.module.css';
 import PropTypes from 'prop-types';
 
 class Filter extends Component {
-  static propTypes = {};
+  static propTypes = {
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+  };
   changeFilter = e => {
     this.props.onChange(e.currentTarget.value);
   };
